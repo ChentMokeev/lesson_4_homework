@@ -1,10 +1,20 @@
 import 'dart:io';
 
 void main() {
-
-  List fingers = ['', 'Большой палец', 'Указательный палец', 'Средний палец', 'Безымянный палец', 'Мизинец'];
   print('Введите число');
-  var myNum = stdin.readLineSync()!;
+  var myNum = int.parse(stdin.readLineSync()!);
 
-  print(fingers[int.parse(myNum)]);
+  print(printByIndex(myNum));
+}
+
+printByIndex(int a) {
+  List fingers = [
+    '',
+    'Большой палец',
+    'Указательный палец',
+    'Средний палец',
+    'Безымянный палец',
+    'Мизинец'
+  ];
+  return fingers[a];
 }
